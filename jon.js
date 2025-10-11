@@ -20,7 +20,7 @@ let lado1 = 4;
 area = area(lado1);
 perimetro = perimetro(lado1)
 console.log(`El área de un cuadrado de lado ${lado1} es ${area}`);
-console.log(`El área de un cuadrado de lado ${lado1} es ${area}`);
+console.log(`El perímetro de un cuadrado de lado ${lado1} es ${perimetro}`);
 
 //Ejercicio 3 
 function cal_cociente(num1,num2){
