@@ -9,7 +9,10 @@ let todasTeclas = [
   "ZXCVBNM"
 ];
 
-function crearinput(){
+let filaActual = 0;
+let columnaActual = 0;
+
+function crearinput() {
   paleta.innerHTML = "";
   for (let i = 0; i < 6; i++) {
     for (let j = 0; j < 5; j++) {
@@ -20,6 +23,7 @@ function crearinput(){
     }
   }
 }
+
 function crearTeclado() {
   teclado.innerHTML = "";
 
@@ -27,7 +31,6 @@ function crearTeclado() {
     let filaDiv = document.createElement("div");
     filaDiv.className = "filaTeclas";
 
-    // Recorrer cada letra de la fila
     let fila = todasTeclas[i];
     for (let j = 0; j < fila.length; j++) {
       let tecla = document.createElement("div");
@@ -41,6 +44,40 @@ function crearTeclado() {
     teclado.appendChild(filaDiv);
   }
 }
+
+
+document.addEventListener("keydown", (e) => {
+  let letra = e.key.toUpperCase();
+
+  if (/^[A-Z]$/.test(letra)) {
+    if (columnaActual < 5 && filaActual < 6) {
+      let casilla = document.getElementById(
+        `input-${filaActual}-${columnaActual}`
+      );
+      casilla.textContent = letra;
+      columnaActual++;
+    }
+  }
+
+
+  if (e.key === "Backspace") {
+    if (columnaActual > 0) {
+      columnaActual--;
+      let casilla = document.getElementById(
+        `input-${filaActual}-${columnaActual}`
+      );
+      casilla.textContent = "";
+    }
+  }
+
+  // Enter → pasar a la siguiente fila
+  if (e.key === "Enter") {
+    if (columnaActual === 5) {
+      filaActual++;
+      columnaActual = 0;
+    }
+  }
+});
 
 crearTeclado();
 crearinput();
