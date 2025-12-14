@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <script src="validaciones.js"></script>
+    <title>Formulario de Usuario</title>
+</head>
+<body>
+    <h1>Datos del usuario</h1>
+    <form>
+        <div class="cuadro">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Pepe"><span class="error-msg"></span><br><br>
+        
+            <label for="apellido1">Primer apellido:</label>
+            <input type="text" id="apellido1" name="apellido1" placeholder="Fernandez"><span class="error-msg"></span><br><br>
+
+
+            <label for="apellido2">Segundo apellido:</label>
+            <input type="text" id="apellido2" name="apellido2" placeholder="Gomez"><span class="error-msg"></span><br><br>
+
+            <label for="fecha_nacimiento">Fecha de nacimiento:</label>
+            <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" placeholder="dd/mm/AAAA"><span class="error-msg"></span><br><br>
+
+
+            <label>Tipo documento:</label>
+            <select id="tipo_documento">
+                <option>DNI</option>
+                <option>NIE</option>
+            </select><span class="error-msg"></span><br><br>
+
+
+            <label  for="documento">Nº documento:</label>
+            <input type="text" id="documento" name="documento" placeholder="89237308E"><span class="error-msg"></span><br><br>
+
+            <div class="inf_box">
+                <div class="info-ico">
+                    <img src="info.png">
+                </div>
+                <div class="info-text">
+                    <p>Este identificador se utilizará como usuario de acceso a la Sede electrónica</p>
+                </div>
+            </div>
+
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password" name="password" placeholder="miContraseña"><span class="error-msg"></span><br><br>
+            
+
+            <label for="password_confirm">Confirmar contraseña:</label>
+            <input type="password" id="password_confirm" name="password_confirm" placeholder="miContraseña"><span class="error-msg"></span><br><br>
+
+            <label for="num_soporte">Número de soporte/IDESP/IXESP:</label>
+            <input type="text" id="num_soporte" name="num_soporte" placeholder="IDESP12345678"><span class="error-msg"></span><br><br>
+            
+
+            <div class="inf_box">
+                <div class="info-ico">
+                    <img src="info.png">
+                </div>
+                <div class="info-text">
+                    <p>Si selecciona como tipo de Documento DNI deberá informar el IDESP, si por el contrario selecciona NIE deberá informar el IXESP 
+                     para que el Sistema pueda verificar sus Datos de Identidad con la Dirección General de la Policía. Ver ayuda identidad.
+                    Le recordamos que la información introducida en los campos Nombre, Primer apellido y Segundo apellido deben ser EXACTAMENTE IGUALES a los existentes en su documento de identificación.</p>
+                </div>
+            </div>
+
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="email" placeholder="email@gmail.com"><span class="error-msg"></span><br><br>
+            
+
+            <label for="email_confirm">Confirmar correo electrónico:</label>
+            <input type="email" id="email_confirm" name="email_confirm" placeholder="email@gmail.com"><span class="error-msg"></span><br><br>
+
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" placeholder="683556119"><span class="error-msg"></span><br><br>
+            
+
+            <div class="inf_box">
+                <div class="info-ico">
+                <img src="info.png">
+                </div>
+                <div class="info-text">
+                    <p>El correo electrónico y el teléfono móvil indicados se utilizarán para recibir comunicaciones relativas a los trámites implementados en esta sede electrónica.</p>
+                </div>
+            </div>
+     </div>
+
+        <div class="cuadro">
+            <div class="condiciones">
+                <input type="checkbox" id="condiciones" name="condiciones">
+                <span class="error-msg"></span>
+            <div>
+                <p class="titulo">
+                    Declaro que los datos que figuran en la solicitud de registro son ciertos, 
+                    asumiendo en caso contrario las responsabilidades que pudieran derivarse de su inexactitud 
+                    y autorizando al Ministerio de Educación y Formación Profesional la consulta de los mismos 
+                    en el Sistema de Verificación de Datos de Identidad de la Dirección General de la Policía.
+                </p>
+            </div>
+        </div>
+
+        <div class="condiciones">
+            <input type="checkbox" id="condiciones2" name="condiciones2">
+            <span class="error-msg"></span>
+            <div>
+                <p class="titulo"><strong>Doy mi consentimiento</strong></p>
+                <p class="tabulado"><strong>Información importante</strong></p>
+                <p class="tabulado">
+                    Al firmar esta petición queda establecido que usted presta su consentimiento expreso al tratamiento 
+                    de sus datos personales. Lea, antes de firmar, la información básica.
+                </p>
+                <p class="tabulado"><strong>Información importante</strong></p>
+                <p class="tabulado">
+                    Los datos personales recogidos serán incorporados en el registro de actividades de tratamiento 
+                    del Ministerio de Educación y Formación Profesional denominado SEDE ELECTRÓNICA en cumplimiento 
+                    del Reglamento General de Protección de Datos:
+                </p>
+                <p>
+                    - Responsable del tratamiento: Subsecretaría de Educación y Formación Profesional <br>
+                    - Finalidad: Registro de los ciudadanos en la sede electrónica del Ministerio, 
+                      para realizar trámites electrónicos de los que el ministerio es competente, comprendiendo todo el ciclo del trámite administrativo <br>
+                    - Legitimación: Consentimiento del interesado y orden EDU/947/2010, de 13 de abril, 
+                      por la que se crea y regula el registro electrónico del Ministerio de Educación y Formación Profesional <br>
+                    - Destinatarios: No están previstos <br>
+                    - Derechos: Acceso, rectificación, limitación del tratamiento, portabilidad de los datos, 
+                      oposición y a no ser objeto de decisiones individualizadas.
+                </p>
+            </div>
+        </div>
+    </div>
+    <input type="submit" value="Aceptar">
+</form>
+
+</body>
+</html>
