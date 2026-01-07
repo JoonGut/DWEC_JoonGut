@@ -1,5 +1,7 @@
 # DWEC_JoonGut
 # Wordle
+## Normas
+Mediante F12, podras visualizar la la palabra solicitada. A veces tarda un poco en llegar a ser filtrada, porque descarta las palabras diferentes a 5 letras
 ## Descripcion
 La famosa aplicacion de Wordle, donde tenemos que adivinar una palabra de 5 letras
 + En caso de acertar una letra y el lugar se cambiara el background a *verde*
