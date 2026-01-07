@@ -19,7 +19,7 @@ let juegoTerminado = false;
 function llamarApi() {
   return fetch("https://api.api-ninjas.com/v1/randomword", {
     headers: {
-      "X-Api-Key": "IJkccVv2AOY5qTAPUTtdXg343yPvIJOcFvocszZn"
+      "X-Api-Key": "TU-API-KEY"
     }
   })
     .then(res => res.json())
